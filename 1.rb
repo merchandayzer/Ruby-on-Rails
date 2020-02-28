@@ -7,7 +7,7 @@ b = gets.to_f
 puts "Enter c:"
 c = gets.to_f
 
-if (a == 0)
+if a == 0
   x = - c / b 
   puts
   puts "x = #{x}"
