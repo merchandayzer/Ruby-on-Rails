@@ -1,30 +1,39 @@
 #Задание 1
 
-
+puts "Enter a:"
 a = gets.to_f
+puts "Enter b:"
 b = gets.to_f
+puts "Enter c:"
 c = gets.to_f
 
-D = b * b - 4 * a * c
-
-if D > 0
-  x1 = (- b + Math.tan(D)) / 2 * a
-  x2 = (- b - Math.tan(D)) / 2 * a
+if (a == 0)
+  x = - c / b 
   puts
-  puts "D = " + D.to_s
-  puts "x1 = " + x1.to_s
-  puts "x2 = " + x2.to_s
-end
+  puts "x = #{x}"
+else
 
-if D == 0
-  x1 = - b / 2 * a
-  puts
-  puts "D = " + D.to_s
-  puts "x1 = x2 = " + x1.to_s
-end
+  D = b * b - 4 * a * c
 
-if D < 0
-  puts
-  puts "D = " + D.to_s
-  puts "No roots"
+  if D > 0
+    x1 = (- b + Math.sqrt(D)) / (2 * a)
+    x2 = (- b - Math.sqrt(D)) / (2 * a)
+    puts
+    puts "D = #{D}"
+    puts "x1 = #{x1}"
+    puts "x2 = #{x2}"
+  end
+
+  if D == 0
+    x1 = - b / (2 * a)
+    puts
+    puts "D = #{D}"
+    puts "x1 = x2 = #{x1}"
+  end
+
+  if D < 0
+    puts
+    puts "D = #{D}"
+    puts "No roots"
+  end
 end
